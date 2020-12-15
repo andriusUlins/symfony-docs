@@ -731,7 +731,7 @@ Modify configuration and add `success_handler`.
                         'check_route' => 'login_check',
                         'lifetime' => 600,
                         'max_uses' => 1,
-                        'success_handler' => 'App\Security\Authentication\AuthenticationSuccessHandler'
+                        'success_handler' => 'App\Security\Authentication\AuthenticationSuccessHandler',
                     ],
                 ],
             ],
