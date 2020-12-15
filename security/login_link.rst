@@ -655,7 +655,6 @@ user create this POST request (e.g. by clicking a button)::
         </form>
     {% endblock %}
 
-
 Changing success handler
 ........................
 
@@ -665,7 +664,7 @@ First create `AuthenticationSuccessHandler`
 .. configuration-block::
 
     .. code-block:: php-annotations
-    
+
         // src/Security/Authentication/AuthenticationSuccessHandler.php
         namespace App\Security\Authentication;
 
@@ -681,7 +680,7 @@ First create `AuthenticationSuccessHandler`
                 ...
             }
         }
-    
+
 Modify configuration and add `success_handler`.
 
 .. configuration-block::
