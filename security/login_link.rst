@@ -659,29 +659,25 @@ Changing success handler
 ........................
 
 You can change how the success handler works.
-First create the `AuthenticationSuccessHandler`
+First create the ``AuthenticationSuccessHandler``::
 
-.. configuration-block::
+    // src/Security/Authentication/AuthenticationSuccessHandler.php
+    namespace App\Security\Authentication;
 
-    .. code-block:: php-annotations
+    use Symfony\Component\HttpFoundation\JsonResponse;
+    use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+    use Symfony\Component\Security\Http\Authentication\AuthenticationSuccessHandlerInterface;
 
-        // src/Security/Authentication/AuthenticationSuccessHandler.php
-        namespace App\Security\Authentication;
-
-        use Symfony\Component\HttpFoundation\JsonResponse;
-        use Symfony\Component\HttpFoundation\Request;
-        use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-        use Symfony\Component\Security\Http\Authentication\AuthenticationSuccessHandlerInterface;
-
-        class AuthenticationSuccessHandler implements AuthenticationSuccessHandlerInterface
+    class AuthenticationSuccessHandler implements AuthenticationSuccessHandlerInterface
+    {
+        public function onAuthenticationSuccess(Request $request, TokenInterface $token)
         {
-            public function onAuthenticationSuccess(Request $request, TokenInterface $token)
-            {
-                ...
-            }
+            // ...
         }
+    }
 
-Modify the configuration and add `success_handler`.
+Modify the configuration and add ``success_handler``.
 
 .. configuration-block::
 
