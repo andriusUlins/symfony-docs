@@ -658,8 +658,8 @@ user create this POST request (e.g. by clicking a button)::
 Changing success handler
 ........................
 
-You can change how success handler works.
-First create `AuthenticationSuccessHandler`
+You can change how the success handler works.
+First create the `AuthenticationSuccessHandler`
 
 .. configuration-block::
 
@@ -681,7 +681,7 @@ First create `AuthenticationSuccessHandler`
             }
         }
 
-Modify configuration and add `success_handler`.
+Modify the configuration and add `success_handler`.
 
 .. configuration-block::
 
