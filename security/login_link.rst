@@ -677,7 +677,7 @@ First create the ``AuthenticationSuccessHandler``::
         }
     }
 
-Modify the configuration and add ``success_handler``.
+Modify the configuration and use your handler for the ``success_handler`` key:
 
 .. configuration-block::
 
