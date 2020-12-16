@@ -655,8 +655,8 @@ user create this POST request (e.g. by clicking a button)::
         </form>
     {% endblock %}
 
-Changing success handler
-........................
+Customizing the Success Handler
+...............................
 
 You can change how the success handler works.
 First create the ``AuthenticationSuccessHandler``::
