@@ -671,9 +671,14 @@ First create the ``AuthenticationSuccessHandler``::
 
     class AuthenticationSuccessHandler implements AuthenticationSuccessHandlerInterface
     {
-        public function onAuthenticationSuccess(Request $request, TokenInterface $token)
+        public function onAuthenticationSuccess(Request $request, TokenInterface $token): JsonResponse
         {
-            // ...
+            // Example use case: Create API token for Guard Authentication.
+            $user = $token->getUser(); // Returns string|\Stringable|UserInterface - depends on your implementation.
+
+            $userApiToken = $user->getApiToken();
+
+            return new JsonResponse(['apiToken' => 'userApiToken']);
         }
     }
 
