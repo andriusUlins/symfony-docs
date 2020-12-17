@@ -658,7 +658,7 @@ user create this POST request (e.g. by clicking a button)::
 Customizing the Success Handler
 ...............................
 
-To customize, how the success handler behaves, create  your own ``AuthenticationSuccessHandler``::
+To customize, how the success handler behaves, create your own ``AuthenticationSuccessHandler``::
 
     // src/Security/Authentication/AuthenticationSuccessHandler.php
     namespace App\Security\Authentication;
